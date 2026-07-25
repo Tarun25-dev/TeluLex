@@ -181,7 +181,11 @@ elif st.session_state.active_session == "delete":
                     msg.success("Word deleted successfully!")
                     time.sleep(2)
                     st.rerun()
-        
+                    
+    if st.button("❌ Close"):
+        st.session_state.active_session = None
+        st.rerun()
+         
 st.divider()
 
 # we need to calculate no.of words in the dictionary through query and use count() for getting how many rows exactly from the db and it returns tuple and it has only one number thats its len then we show in the page by index value 0
