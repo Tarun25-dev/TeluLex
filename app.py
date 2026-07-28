@@ -292,9 +292,9 @@ st.divider()
 # delete removes records from dictionary db but table itself is exists table structure remains
 # sqlite has a special hidden table called sqlite_sequence it stores the last autoincrement value for every table so whenever we again start from id 1 then we execute that query
 # ⚠️ the below query deletes all the data 
-cursor.execute("DELETE FROM dictionary")
-cursor.execute("DELETE FROM sqlite_sequence WHERE name = 'dictionary'")
-conn.commit()
+#cursor.execute("DELETE FROM dictionary")
+#cursor.execute("DELETE FROM sqlite_sequence WHERE name = 'dictionary'")
+#conn.commit()
 
 # we need another column so we need to execute thiss query at once and then i commented that no need run every
 # cursor.execute("""ALTER TABLE dictionary ADD COLUMN created_at TIMESTAMP""")
